@@ -66,12 +66,14 @@ window.addEventListener("load", function () {
       (playerChoiceValue === "scissors" && HouseChoiceValue === "paper")
     ) {
       gameStateEl.innerHTML = "You Win";
-      scoreEl.innerHTML = Number(scoreEl.innerHTML) + 1;
-    }else if(
+      score++;
+      scoreEl.innerHTML = score;
+      localStorage.setItem("gameScore_1", score);
+    } else if (
       (playerChoiceValue === "scissors" && HouseChoiceValue === "rock") ||
       (playerChoiceValue === "rock" && HouseChoiceValue === "paper") ||
       (playerChoiceValue === "paper" && HouseChoiceValue === "scissors")
-    ){
+    ) {
       gameStateEl.innerHTML = "You Lose";
     } else {
       gameStateEl.innerHTML = "Draw";
@@ -80,7 +82,7 @@ window.addEventListener("load", function () {
   }
   function gameInit() {
     is_Runing = true;
-    score = 0;
+    score = JSON.parse(localStorage.getItem("gameScore_1")) || 0;
     scoreEl.innerHTML = score;
   }
   gameInit();

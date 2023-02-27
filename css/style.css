@@ -4,33 +4,42 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  font-size: 10px;
+}
 body {
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-size: cover;
   min-height: 100vh;
+  font-size: 1.6rem;
   color: #fff;
   font-family: "Barlow Semi Condensed", sans-serif;
+  min-width: 200px;
+  padding-bottom: 60px;
+}
+img {
+  max-width: 100%;
 }
 .container {
-  max-width: 1366px;
+  max-width: 136.6rem;
 }
 .header_content {
-  max-width: 800px;
-  border: 2px solid hsl(217, 16%, 45%);
-  border-radius: 20px;
-  margin: 60px auto 50px;
-  padding: 20px;
+  max-width: 80rem;
+  border: 0.2rem solid hsl(217, 16%, 45%);
+  border-radius: 2rem;
+  margin: 6rem auto 5rem;
+  padding: 2rem;
 }
 .score_element {
-  width: 130px;
+  width: 100%;
+  max-width: 13rem;
   background: #fff;
   color: #000;
   text-align: center;
   margin: 0 0 0 auto;
-  border-radius: 6px;
-  padding-top: 8px;
-  padding-bottom: 15px;
+  border-radius: 0.6rem;
+  padding-top: 0.8rem;
+  padding-bottom: 1.5rem;
 }
 
 .score_title {
@@ -42,16 +51,18 @@ body {
 
 .score_value {
   margin: 0;
-  font-size: 60px;
-  line-height: 50px;
+  font-size: 6rem;
+  line-height: 5rem;
   font-weight: bold;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
-
+.section_game {
+  min-height: 60vh;
+}
 .game_choices-content {
-  max-width: 305px;
-  min-height: 277px;
-  margin: 100px auto 90px;
+  max-width: 30.5rem;
+  min-height: 27.7rem;
+  margin: 10rem auto 9rem;
   position: relative;
   display: none;
 }
@@ -80,29 +91,32 @@ body {
 .game_choices-content .btn-choice {
   position: absolute;
   background-color: #fff;
-  border: 18px solid hsl(230, 89%, 62%);
+  border: 1.8rem solid hsl(230, 89%, 62%);
   border-radius: 50%;
-  width: 140px;
-  height: 140px;
+  width: 14rem;
+  height: 14rem;
   transform: translate(-50%, -50%);
-  top: 20px;
-  left: 20px;
-  box-shadow: inset 0px 0px 12px 5px rgb(0 0 0 / 30%);
+  top: 2rem;
+  left: 2rem;
+  box-shadow: inset 0 0 1.2rem 0.5rem rgb(0 0 0 / 30%);
   cursor: pointer;
 }
 
 .game_choices-content .btn-choice.scissors {
-  left: calc(100% - 20px);
+  left: calc(100% - 2rem);
   border-color: hsl(39, 89%, 49%);
 }
 
 .game_choices-content .btn-choice.rock {
   left: 50%;
-  top: calc(100% - 50px);
+  top: calc(100% - 5rem);
   border-color: hsl(349, 71%, 52%);
 }
+.game_choices-content .btn-choice img {
+  width: 48%;
+}
 #game-result {
-  margin: 60px auto;
+  margin: 6rem auto;
   display: none;
 }
 #game-result.active {
@@ -118,13 +132,13 @@ body {
   }
 }
 .btn-picked {
-  border: 36px solid hsl(230, 89%, 62%);
+  border: 3.6rem solid hsl(230, 89%, 62%);
   border-radius: 50%;
-  width: 280px;
-  height: 280px;
-  box-shadow: inset 0px 0px 12px 5px rgb(0 0 0 / 30%);
+  width: 28rem;
+  height: 28rem;
+  box-shadow: inset 0 0 1.2rem 0.5rem rgb(0 0 0 / 30%);
   display: block;
-  margin: 60px auto;
+  margin: 6rem auto;
   position: relative;
 }
 .btn-picked.paper {
@@ -141,11 +155,11 @@ body {
 }
 .btn-picked.empty {
   border: 0;
-  width: 200px;
-  height: 200px;
-  margin-top: 40px;
+  width: 20rem;
+  height: 20rem;
+  margin-top: 4rem;
   background: #17223e;
-  box-shadow: inset 0 0 4px 0px rgb(0 0 0 / 30%);
+  box-shadow: inset 0 0 0.4rem 0 rgb(0 0 0 / 30%);
 }
 .btn-picked::after {
   content: "";
@@ -173,18 +187,19 @@ body {
 #game-result .title {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 90px;
+  margin-bottom: 9rem;
   font-weight: bold;
-  font-size: 25px;
-  letter-spacing: 3px;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+  white-space: nowrap;
 }
 
 .result-title {
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 5rem;
   min-width: 130%;
 }
 .btn_play-again {
@@ -195,13 +210,14 @@ body {
   background: #fff;
   font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
-  padding: 10px 20px;
-  border-radius: 8px;
-  max-width: 200px;
-  margin-bottom: 50px;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  max-width: 20rem;
+  margin-bottom: 5rem;
 }
 #result-status {
   display: none !important;
+  margin: 0 3.5rem;
 }
 #result-status.active {
   display: flex !important;
@@ -210,24 +226,24 @@ body {
 
 .btn-rules {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 2rem;
+  right: 2rem;
   font-weight: 600;
   font-family: inherit;
   background: transparent;
   color: #fff;
-  border: 1px solid hsl(217, 16%, 45%);
-  padding: 5px 18px;
-  border-radius: 4px;
+  border: 0.1rem solid hsl(217, 16%, 45%);
+  padding: 0.5rem 1.8rem;
+  border-radius: 0.4rem;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 #modal1 .modal-body {
   display: flex;
   justify-content: center;
   align-items: center;
   /* min-height: 80vh; */
-  padding: 20px 0;
+  padding: 2rem 0;
 }
 .modal .modal-header {
   border: 0;
@@ -239,7 +255,7 @@ body {
   text-transform: uppercase;
 }
 .modal-dialog {
-  max-width: 400px;
+  max-width: 40rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -252,14 +268,92 @@ body {
 }
 
 .modal .close {
-  font-size: 34px;
+  font-size: 3.4rem;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 2rem;
   color: hsl(217, 16%, 45%);
 }
+@media screen and (max-width: 800px) and (min-width: 375px) {
+  #game-result .title {
+    margin-bottom: 0;
+  }
 
+  .btn-picked {
+    margin: 2rem auto;
+    width: 14rem;
+    height: 14rem;
+    border-width: 2rem;
+  }
+
+  .header_content {
+    margin-bottom: 0rem !important;
+  }
+
+  div#game-result {
+    margin-top: 3rem;
+  }
+}
 @media screen and (max-width: 375px) {
-  body {
-    background: #00f;
+  html {
+    font-size: 6px;
+  }
+  .btn-picked {
+    width: 14rem;
+    height: 14rem;
+    border-width: 1.8rem;
+    margin: 3rem auto;
+  }
+
+  #game-result .title {
+    margin-bottom: 3rem;
+  }
+
+  .result-title {
+    margin-top: 2rem;
+  }
+  #modal1 {
+    display: none;
+  }
+  #modal1.show {
+    display: block;
+  }
+  #modal1 .modal-content {
+    width: 100%;
+    height: 100%;
+  }
+
+  #modal1 .modal-dialog {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+  }
+  .modal .modal-header {
+    height: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    margin-bottom: 6rem;
+  }
+
+  .modal .close {
+    position: absolute;
+    bottom: 50px;
+    z-index: 99;
+  }
+
+  .modal .modal-title {
+    font-size: 3rem;
+  }
+
+  #modal1 .modal-body {
+    align-items: flex-start;
+  }
+  .btn-rules {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 10rem;
+    padding: 0.4rem;
   }
 }
