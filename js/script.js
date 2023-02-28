@@ -1,4 +1,3 @@
-
 window.addEventListener("load", function () {
   let is_Runing = false;
   let score = 0;
@@ -80,6 +79,11 @@ window.addEventListener("load", function () {
       gameStateEl.innerHTML = "Draw";
     }
     resultStatusEl.classList.add("active");
+    resultStatusEl.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   }
   function gameInit() {
     is_Runing = true;
